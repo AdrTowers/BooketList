@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.84.0">
-    <title>Sign In</title>
+    <title>Register</title>
 
 
 
@@ -18,7 +18,7 @@
 
 
 
-    <style>
+    <!-- <style>
         .bd-placeholder-img {
             font-size: 1.125rem;
             text-anchor: middle;
@@ -32,19 +32,23 @@
                 font-size: 3.5rem;
             }
         }
-    </style>
+    </style> -->
 
     <!-- Custom styles for this template -->
-    <link href="../styles/signin.css" rel="stylesheet">
+    <link href="../styles/register.css" rel="stylesheet">
 </head>
 
 <body class="text-center">
 
-    <main class="form-signin">
+    <main class="form-register">
         <form>
-            <img class="mb-4" src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
-            <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+            <img class="mb-4" src="/images/logo.PNG" alt="">
+            <h1 class="h3 mb-3 fw-normal">Create account</h1>
 
+            <div class="form-floating">
+                <input type="text" class="form-control" id="floatingName" placeholder="fullName">
+                <label for="floatingName">Full name</label>
+            </div>
             <div class="form-floating">
                 <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
                 <label for="floatingInput">Email address</label>
@@ -53,15 +57,13 @@
                 <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
                 <label for="floatingPassword">Password</label>
             </div>
-            <div class="checkbox mb-3"></div>
-            <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+            <div class="form-floating">
+                <input type="password" class="form-control" id="confirmPassword" placeholder="confirmPassword">
+                <label for="confirmPassword">Confirm password</label>
+            </div>
 
-            <!-- <div class="checkbox mb-3">
-                <label>
-                    <input type="checkbox" value="forgot-pw"> Forgot password
-                </label>
-            </div> -->
-            <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+            <button class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
+            <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
         </form>
     </main>
 
