@@ -41,8 +41,8 @@
                 <div class="col search-section mt-3">
                     <h5 class="cont-title">Search for book</h5>
                     <form class="d-flex mt-3" id="form-id">
-                        <input class="form-control me-2" id="book-search" type="search"
-                            placeholder="Search by Title, Author, Category or ISBN" aria-label="Search">
+                        <input class="form-control me-2" name = "query" id="book-search" type="search"
+                            placeholder="Search by Title, Author, Category or ISBN" aria-label="Search" required>
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
                     <br>
@@ -50,6 +50,16 @@
             </div>
 
         </div>
+
+        <!-- Results container of book lists -->
+        <div class="container trending">
+            <h5 class="cont-title">Results for ${SearchInput}</h5>
+            <div class="row">
+                <div class="col-sm-3" id ="results_container">
+
+                </div>
+            </div>
+        </div>  
         <!-- First Carousel of book lists -->
         <div class="container trending">
             <h5 class="cont-title">Top Trending</h5>
