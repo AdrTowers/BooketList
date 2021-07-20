@@ -4,14 +4,59 @@
 }
 
 .container {
-    background-color: aqua;
+    background-color: transparent;
+    margin: 25px;
+}
+
+.cont-title {
+    padding-top: 10px;
+}
+
+.book-search {
+    width: 20%;
+}
+
+.search-section {
+    background-color: whitesmoke;
+}
+
+.form-control-sm {
+        margin: 5px;;
+}
+
+.trending {
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+
+.school {
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+
+.card {
     margin: 10px;
 }
 
-.form-control {
+/* .d-flex {
     width: 50%;
-}
+} */
 
 .btn-outline-success {
     display: flex;
 }
+
+.btn-primary {
+    background-color: #7ACBCD;
+    border-color: #7ACBCD;
+}
+
+.footer {
+    padding: 15px;
+    background-color: #212529;
+  }
+
+  .copyright-info {
+    text-align: center;
+    padding-right: 1rem;
+  }

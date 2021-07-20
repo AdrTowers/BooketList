@@ -15,48 +15,166 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark" id="nav-bar">
-        <a class="navbar-brand" href="/components/index.html"> Booket </a>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav center-nav-links">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/view/booketlist.html">Booketlist</a>
-                </li>
-            </ul>
-            <ul class="navbar-nav right-nav-links">
-                <li class="nav-item">
-                    <a class="nav-link" href="/view/signin.html">Sign in</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/view/register.html">Register</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <!-- Book Search form -->
     <div class="jumbotron">
-        <div class="container">
-            <div class="col search-bar mt-3">
-                <form>
-                    <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
+        <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark" id="nav-bar">
+            <a class="navbar-brand" href="/components/index.html"> Booket </a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav center-nav-links">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/view/booketlist.html">Booketlist</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav right-nav-links">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/view/signin.html">Sign in</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/view/register.html">Register</a>
+                    </li>
+                </ul>
             </div>
-        </div>
+        </nav>
+        <!-- Book Search form -->
         <div class="container">
             <div class="row">
-                <div class="col mt-3">
-                    <h5>Search for Books</h5>
+                <div class="col search-section mt-3">
+                    <!-- <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search by Title, Author or ISBN"
+                            aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form> -->
+                    <h6 class="cont-title">Search for book</h6>
+                    <form class="book-search">
+                        <input class="form-control form-control-sm" type="text" placeholder="Title"
+                            aria-label=".form-control-sm example">
+                        <input class="form-control form-control-sm" type="text" placeholder="Author"
+                            aria-label=".form-control-sm example">
+                        <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm"
+                            aria-label=".form-control-sm example">
+                        <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm"
+                            aria-label=".form-control-sm example">
+                        <button class="btn btn-primary search-btn">Search</button>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+        <!-- First Carousel of book lists -->
+        <div class="container trending">
+            <h5 class="cont-title">Top Trending</h5>
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="card">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Title</h5>
+                            <h6 class="sub-title text-muted">Author</h6>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                            </p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Title</h5>
+                            <h6 class="sub-title text-muted">Author</h6>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                            </p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Title</h5>
+                            <h6 class="sub-title text-muted">Author</h6>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                            </p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Title</h5>
+                            <h6 class="sub-title text-muted">Author</h6>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                            </p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="container">
+        <!-- Second carousel of book lists -->
+        <div class="container school">
+            <h5 class="cont-title">Back to School</h5>
             <div class="row">
-                <div class="col mt-3">
-                    <h5>Search for Books</h5>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Title</h5>
+                            <h6 class="sub-title text-muted">Author</h6>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                            </p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Title</h5>
+                            <h6 class="sub-title text-muted">Author</h6>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                            </p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Title</h5>
+                            <h6 class="sub-title text-muted">Author</h6>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                            </p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Title</h5>
+                            <h6 class="sub-title text-muted">Author</h6>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                            </p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        <footer class="footer">
+            <div class="copyright-info">
+                <span class="text-muted">© 2021 Copyright</span>
+            </div>
+            <div class="home">
+            </div>
+        </footer>
     </div>
 </body>
 
