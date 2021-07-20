@@ -6,7 +6,8 @@ const connectionString = 'mongodb+srv://cruduser:tyV5JOf5JSdVN4uW@cluster0.srsao
 mongoose.connect(connectionString, 
     { 
         useNewUrlParser: true, 
-        useUnifiedTopology: true 
+        useUnifiedTopology: true,
+        useFindAndModify: false
     }).then(() => {
         console.log("DB connection successful");
     }).catch((error) => {
