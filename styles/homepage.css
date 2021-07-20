@@ -1,3 +1,7 @@
+body, html {
+  height: 100%;
+}
+
 .jumbotron {
     background-image: url("/images/books-bg-md.jpg");
     background-size: cover;
@@ -18,6 +22,11 @@
 
 .search-section {
     background-color: whitesmoke;
+    border-radius: 5px;;
+}
+
+.btn-outline-success {
+    /* change border color on search button */
 }
 
 .form-control-sm {
@@ -49,6 +58,11 @@
 .btn-primary {
     background-color: #7ACBCD;
     border-color: #7ACBCD;
+}
+
+.btn-primary:hover {
+    background-color: #93f0f1;
+    border-color: #93f0f1;
 }
 
 .footer {

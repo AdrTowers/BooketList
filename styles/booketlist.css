@@ -1,0 +1,25 @@
+body, html {
+    height: 100%;
+  }
+
+.bg-img {
+    background-image: url("/images/bookshelf-md.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.book-collection{
+    background-color: whitesmoke;
+}
+
+.footer {
+    padding: 15px;
+    background-color: #212529;
+  }
+
+  .copyright-info {
+    text-align: center;
+    padding-right: 1rem;
+  }

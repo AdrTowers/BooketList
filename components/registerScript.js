@@ -16,8 +16,7 @@ formData.addEventListener('submit', (e) =>{
         //Alert if passwords don't match
         console.log("Wrong pass");
     }
-    
-})
+ })
 
 function registerInfo(name, email, pass, confPass){
     console.log("registerInfo:", name, email, pass, confPass)
