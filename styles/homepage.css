@@ -1,0 +1,17 @@
+.jumbotron {
+    background-image: url("/images/books-bg-md.jpg");
+    background-size: cover;
+}
+
+.container {
+    background-color: aqua;
+    margin: 10px;
+}
+
+.form-control {
+    width: 50%;
+}
+
+.btn-outline-success {
+    display: flex;
+}
