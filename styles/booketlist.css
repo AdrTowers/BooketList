@@ -3,15 +3,16 @@ body, html {
   }
 
 .bg-img {
-    background-image: url("/images/bookshelf-md.jpg");
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-image: url("/images/sketch-paper-md.jpg");
     background-size: cover;
 }
 
 .book-collection{
-    background-color: whitesmoke;
+    background-color: transparent;
+}
+
+.cont-title {
+    padding-top: 10px;
 }
 
 .footer {
