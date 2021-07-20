@@ -11,11 +11,14 @@ formData.addEventListener('submit', (e) =>{
 
     if(password == confPass){
         console.log("Same pass");
+        registerInfo(name, email, password, confPass)
     } else {
         //Alert if passwords don't match
         console.log("Wrong pass");
     }
-    console.log(name, email, password, confPass)
-
     
 })
+
+function registerInfo(name, email, pass, confPass){
+    console.log("registerInfo:", name, email, pass, confPass)
+}

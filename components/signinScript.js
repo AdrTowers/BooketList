@@ -8,6 +8,11 @@ formData.addEventListener('submit', (e) =>{
 
     const email = document.getElementById("floatingInput").value 
     const password = document.getElementById("floatingPassword").value
-    console.log(email, password)
+    console.log("Capturing", email, password)
     
+signIn(email, password)
 })
+
+function signIn(email, pass){
+    console.log("signIn", email, pass)
+}

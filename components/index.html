@@ -9,6 +9,7 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/navbar.css">
     <link rel="stylesheet" href="../styles/homepage.css">
+    <script defer src="./landingpageScripts.js"></script>
     <title>Booket List</title>
 
 </head>
@@ -24,6 +25,7 @@
                         <a class="nav-link active" aria-current="page" href="/view/booketlist.html">Booketlist</a>
                     </li>
                 </ul>
+
                 <ul class="navbar-nav right-nav-links">
                     <li class="nav-item">
                         <a class="nav-link" href="/view/signin.html">Sign in</a>
@@ -38,24 +40,13 @@
         <div class="container">
             <div class="row">
                 <div class="col search-section mt-3">
-                    <!-- <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search by Title, Author or ISBN"
-                            aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form> -->
                     <h6 class="cont-title">Search for book</h6>
-                    <form class="book-search">
-                        <input class="form-control form-control-sm" type="text" placeholder="Title"
-                            aria-label=".form-control-sm example">
-                        <input class="form-control form-control-sm" type="text" placeholder="Author"
-                            aria-label=".form-control-sm example">
-                        <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm"
-                            aria-label=".form-control-sm example">
-                        <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm"
-                            aria-label=".form-control-sm example">
-                        <button class="btn btn-primary search-btn">Search</button>
+                    <form class="d-flex mt-3" id="form-id">
+                        <input class="form-control me-2" id="book-search" type="search"
+                            placeholder="Search by Title, Author, Category or ISBN" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
-
+                    <br>
                 </div>
             </div>
 
