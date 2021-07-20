@@ -18,16 +18,15 @@ body {
   margin: auto;
 }
 
-
 .form-register .form-floating:focus-within {
   z-index: 2;
 }
 
 .form-register input[type="text"] {
-    margin-bottom: -1px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-  }
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
 
 .form-register input[type="email"] {
   margin-bottom: -1px;
@@ -42,5 +41,10 @@ body {
 }
 
 .form-register .btn-lg {
-    margin-top: 20px;
-  }
+  margin-top: 20px;
+  background-color: #7ACBCD;
+  border-color: #7ACBCD;
+}
+
+  /* 363636 Grey for input text
+  */
