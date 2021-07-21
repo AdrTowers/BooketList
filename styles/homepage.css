@@ -1,5 +1,6 @@
 body,
-html {
+html,
+.jumbotron {
   height: 100%;
 }
 
@@ -82,6 +83,9 @@ html {
 .footer {
   padding: 15px;
   background-color: #212529;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 .copyright-info {
@@ -90,6 +94,8 @@ html {
 }
 
 #results_container {
+  background-color: whitesmoke;
+  border-radius: 5px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
