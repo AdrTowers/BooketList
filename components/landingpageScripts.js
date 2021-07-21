@@ -40,8 +40,6 @@ function displayBookResults(books) {
     const isbn = book.volumeInfo.industryIdentifiers[0].identifier + " , " + book.volumeInfo.industryIdentifiers[1].identifier;
     const image_url = book.volumeInfo.imageLinks.thumbnail;
     const categories = book.volumeInfo.categories[0];
-    const price = book.saleInfo.retailPrice; // obj
-    const buy_url = book.saleInfo.buyLink;
 
     // create card components
     const card = document.createElement("div");
@@ -51,10 +49,10 @@ function displayBookResults(books) {
     card.innerHTML = `
     <img src=${image_url} class="card-img-top" height="400" width="250" alt=${title}>
     <div class="card-body">
-        <h5 class="card-title">Title: ${title}</h5>
-        <h6 class="sub-title text-muted">Author: ${author}</h6>
-        <h6 class="sub-title text-muted">ISBN: ${isbn}</h6>
-        <p class="card-text">Categories: ${categories}</p>  
+        <h5 class="card-title">${title}</h5>
+        <h6 class="sub-title text-muted">${author}</h6>
+        <h6 class="sub-title text-muted">${isbn}</h6>
+        <p class="card-text">${categories}</p>  
         <button name="add_Button strong" class="btn btn-primary">BOOK ET</button>
     </div>
     `
@@ -70,18 +68,30 @@ function addCard(e) {
   // extract the data from the elements using target element values
   console.log(e.target.parentElement);
 
-  const image_url = e.target.parentElement.parentElement.children[0].getAttribute("src") //link only
+
   const title = e.target.parentElement.children[0].innerHTML; //Title: "Book title" 
   const author = e.target.parentElement.children[1].innerHTML;
   const isbn = e.target.parentElement.children[2].innerHTML;
-  const categories = e.target.parentElement.children[3].innerHTML
-
-
-
-
-  console.log(categories);
-
-
+  const categories = e.target.parentElement.children[3].innerHTML;
+  const image_url = e.target.parentElement.parentElement.children[0].getAttribute("src") //link only
 
   // use fetch to make post call to our api 
+  const URL = "http://localhost:3000/books";
+  fetch(URL, {
+    method: "POST",
+    headers: { "Content-type": "application/json" },
+    body: JSON.stringify({
+      title,
+      author,
+      isbn,
+      categories,
+      image_url
+    })
+  })
+    .then(res => {
+      if (res.ok) return res.json()
+    })
+    .then(response => {
+      console.log(response)   // console logging success
+    })
 }
