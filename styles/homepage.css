@@ -82,6 +82,9 @@ html {
 .footer {
   padding: 15px;
   background-color: #212529;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 .copyright-info {
