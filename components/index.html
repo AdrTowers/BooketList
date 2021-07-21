@@ -11,38 +11,31 @@
     <link rel="stylesheet" href="../styles/homepage.css">
     <script defer src="./landingpageScripts.js"></script>
     <title>Booket List</title>
-
 </head>
 
 <body>
     <!-- Navbar -->
     <div class="jumbotron">
         <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark" id="nav-bar">
-            <a class="navbar-brand" href="/components/index.html"> Booket </a>
+            <a class="navbar-brand" href="/components/index.html">Booket</a>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav center-nav-links">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/view/booketlist.html">Booketlist</a>
                     </li>
                 </ul>
-
-                <ul class="navbar-nav right-nav-links">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/view/signin.html">Sign in</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/view/register.html">Register</a>
-                    </li>
+                <ul class="navbar-nav right-nav-links" id="right-nav">
+                    <!-- Log in and Register buttons created depending on log in status -->
                 </ul>
             </div>
         </nav>
         <!-- Book Search form -->
-        <div class="container">
+        <div class="container-md search-bar">
             <div class="row">
                 <div class="col search-section mt-3">
-                    <h6 class="cont-title">Search for book</h6>
+                    <h5 class="cont-title">Search for book</h5>
                     <form class="d-flex mt-3" id="form-id">
-                        <input class="form-control me-2" name = "query" id="book-search" type="search"
+                        <input class="form-control me-2" name="query" id="book-search" type="search"
                             placeholder="Search by Title, Author, Category or ISBN" aria-label="Search" required>
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
@@ -53,17 +46,18 @@
         </div>
 
         <!-- Results container of book lists -->
-        <div class="container results" id="main_results_container">
+        <div class="container-md search-results">
+            <!-- <h5 class="cont-title">Results for ${SearchInput}</h5>
             <div class="row">
-                <div class="col-sm-3" id ="results_container">
+                <div class="col-sm-3" id="results_container">
 
                 </div>
-            </div>
-        </div>  
+            </div> -->
+        </div>
         <!-- First Carousel of book lists -->
-        <div class="container trending">
+        <div class="container-md mt-3 trending">
             <h5 class="cont-title">Top Trending</h5>
-            <div class="row">
+            <div class="trending-row">
                 <div class="col-sm-3">
                     <div class="card">
                         <img src="..." class="card-img-top" alt="...">
@@ -72,7 +66,7 @@
                             <h6 class="sub-title text-muted">Author</h6>
                             <p class="card-text">With supporting text below as a natural lead-in to additional content.
                             </p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="#" class="btn btn-primary">Add</a>
                         </div>
                     </div>
                 </div>
@@ -84,7 +78,7 @@
                             <h6 class="sub-title text-muted">Author</h6>
                             <p class="card-text">With supporting text below as a natural lead-in to additional content.
                             </p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="#" class="btn btn-primary">Add</a>
                         </div>
                     </div>
                 </div>
@@ -96,7 +90,7 @@
                             <h6 class="sub-title text-muted">Author</h6>
                             <p class="card-text">With supporting text below as a natural lead-in to additional content.
                             </p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="#" class="btn btn-primary">Add</a>
                         </div>
                     </div>
                 </div>
@@ -108,16 +102,40 @@
                             <h6 class="sub-title text-muted">Author</h6>
                             <p class="card-text">With supporting text below as a natural lead-in to additional content.
                             </p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="#" class="btn btn-primary">Add</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Title</h5>
+                            <h6 class="sub-title text-muted">Author</h6>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                            </p>
+                            <a href="#" class="btn btn-primary">Add</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Title</h5>
+                            <h6 class="sub-title text-muted">Author</h6>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                            </p>
+                            <a href="#" class="btn btn-primary">Add</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- Second carousel of book lists -->
-        <div class="container school">
+        <div class="container-md mt-3 school">
             <h5 class="cont-title">Back to School</h5>
-            <div class="row">
+            <div class="school-row">
                 <div class="col-sm-3">
                     <div class="card">
                         <img src="..." class="card-img-top" alt="...">
@@ -126,7 +144,7 @@
                             <h6 class="sub-title text-muted">Author</h6>
                             <p class="card-text">With supporting text below as a natural lead-in to additional content.
                             </p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="#" class="btn btn-primary">Add</a>
                         </div>
                     </div>
                 </div>
@@ -138,7 +156,7 @@
                             <h6 class="sub-title text-muted">Author</h6>
                             <p class="card-text">With supporting text below as a natural lead-in to additional content.
                             </p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="#" class="btn btn-primary">Add</a>
                         </div>
                     </div>
                 </div>
@@ -150,7 +168,7 @@
                             <h6 class="sub-title text-muted">Author</h6>
                             <p class="card-text">With supporting text below as a natural lead-in to additional content.
                             </p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="#" class="btn btn-primary">Add</a>
                         </div>
                     </div>
                 </div>
@@ -162,7 +180,31 @@
                             <h6 class="sub-title text-muted">Author</h6>
                             <p class="card-text">With supporting text below as a natural lead-in to additional content.
                             </p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="#" class="btn btn-primary">Add</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Title</h5>
+                            <h6 class="sub-title text-muted">Author</h6>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                            </p>
+                            <a href="#" class="btn btn-primary">Add</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Title</h5>
+                            <h6 class="sub-title text-muted">Author</h6>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                            </p>
+                            <a href="#" class="btn btn-primary">Add</a>
                         </div>
                     </div>
                 </div>
@@ -172,10 +214,9 @@
             <div class="copyright-info">
                 <span class="text-muted">© 2021 Copyright</span>
             </div>
-            <div class="home">
-            </div>
         </footer>
     </div>
+    <script src="./handleLogIn.js"></script>
 </body>
 
 </html>
