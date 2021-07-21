@@ -16,22 +16,6 @@
 <body>
     <!-- Navbar -->
     <div class="jumbotron">
-        <!-- <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark" id="nav-bar">
-            <a class="navbar-brand" href="/components/index.html">Booket</a>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav center-nav-links">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/view/booketlist.html">Booketlist</a>
-                    </li>
-                </ul>
-
-                <ul class="navbar-nav right-nav-links">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/view/signin.html">Log out</a>
-                    </li>
-                </ul>
-            </div>
-        </nav> -->
         <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark" id="nav-bar">
             <a class="navbar-brand" href="/components/index.html">Booket</a>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -40,13 +24,8 @@
                         <a class="nav-link active" aria-current="page" href="/view/booketlist.html">Booketlist</a>
                     </li>
                 </ul>
-                <ul class="navbar-nav right-nav-links">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/view/signin.html">Sign in</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/view/register.html">Register</a>
-                    </li>
+                <ul class="navbar-nav right-nav-links" id="right-nav">
+                    <!-- Log in and Register buttons created depending on log in status -->
                 </ul>
             </div>
         </nav>
@@ -78,14 +57,14 @@
         <!-- First Carousel of book lists -->
         <div class="container-md mt-3 trending">
             <h5 class="cont-title">Top Trending</h5>
-            <div class="row trending-row">
+            <div class="trending-row">
                 <div class="col-sm-3">
                     <div class="card">
                         <img src="..." class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Title</h5>
                             <h6 class="sub-title text-muted">Author</h6>
-                            <p class="card-text">ISBN
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
                             </p>
                             <a href="#" class="btn btn-primary">Add</a>
                         </div>
@@ -97,7 +76,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Title</h5>
                             <h6 class="sub-title text-muted">Author</h6>
-                            <p class="card-text">ISBN
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
                             </p>
                             <a href="#" class="btn btn-primary">Add</a>
                         </div>
@@ -109,7 +88,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Title</h5>
                             <h6 class="sub-title text-muted">Author</h6>
-                            <p class="card-text">ISBN
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
                             </p>
                             <a href="#" class="btn btn-primary">Add</a>
                         </div>
@@ -121,7 +100,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Title</h5>
                             <h6 class="sub-title text-muted">Author</h6>
-                            <p class="card-text">ISBN
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
                             </p>
                             <a href="#" class="btn btn-primary">Add</a>
                         </div>
@@ -133,7 +112,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Title</h5>
                             <h6 class="sub-title text-muted">Author</h6>
-                            <p class="card-text">ISBN
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
                             </p>
                             <a href="#" class="btn btn-primary">Add</a>
                         </div>
@@ -145,7 +124,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Title</h5>
                             <h6 class="sub-title text-muted">Author</h6>
-                            <p class="card-text">ISBN
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
                             </p>
                             <a href="#" class="btn btn-primary">Add</a>
                         </div>
@@ -156,7 +135,31 @@
         <!-- Second carousel of book lists -->
         <div class="container-md mt-3 school">
             <h5 class="cont-title">Back to School</h5>
-            <div class="row">
+            <div class="school-row">
+                <div class="col-sm-3">
+                    <div class="card">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Title</h5>
+                            <h6 class="sub-title text-muted">Author</h6>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                            </p>
+                            <a href="#" class="btn btn-primary">Add</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Title</h5>
+                            <h6 class="sub-title text-muted">Author</h6>
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                            </p>
+                            <a href="#" class="btn btn-primary">Add</a>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-sm-3">
                     <div class="card">
                         <img src="..." class="card-img-top" alt="...">
@@ -211,10 +214,9 @@
             <div class="copyright-info">
                 <span class="text-muted">© 2021 Copyright</span>
             </div>
-            <div class="home">
-            </div>
         </footer>
     </div>
+    <script src="./handleLogIn.js"></script>
 </body>
 
 </html>

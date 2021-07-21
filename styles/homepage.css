@@ -40,19 +40,25 @@ html {
 .trending {
   background-color: whitesmoke;
   border-radius: 10px;
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
 
 .trending-row {
-  overflow: scroll;
-  overflow-y: hidden;
-}
-.card {
-  display: inline-block;
+  display: flex;
+  width: fit-content;
 }
 
 .school {
   background-color: whitesmoke;
   border-radius: 10px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.school-row {
+  display: flex;
+  width: fit-content;
 }
 
 .card {
