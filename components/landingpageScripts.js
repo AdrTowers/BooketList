@@ -10,13 +10,10 @@ function handleSearch(e) {
   // resetting the form
   e.target.query.value = "";
 
-  searchBooks(searchInput);
-  document.getElementById(
-    "results_header"
-  ).innerHTML = `Your Search Results for ${searchInput}`;
-  // create card based on user input and append the card to the body
-  // let createCard = createCard(searchInput);
-  // document.querySelector("#results_container").appendChild(createdCard);
+  // searchBooks(searchInput);
+  // document.getElementById("results_header").innerHTML = `Your Search Results for ${searchInput}`
+
+  let createdCard = searchBooks(searchInput);
 }
 
 function searchBooks(userInput) {
@@ -34,34 +31,57 @@ function searchBooks(userInput) {
     .catch((err) => console.log(err));
 }
 
+
 function displayBookResults(books) {
   console.log(books);
   for (const book of books) {
     const title = book.volumeInfo.title;
     const author = book.volumeInfo.authors; // array
-    const description = book.volumeInfo.description; // trim
-    const subtitle = book.volumeInfo.subtitle;
-    const isbn = book.volumeInfo.industryIdentifiers;
+    const isbn = book.volumeInfo.industryIdentifiers[0].identifier + " , " + book.volumeInfo.industryIdentifiers[1].identifier;
     const image_url = book.volumeInfo.imageLinks.thumbnail;
-    const categories = book.volumeInfo.categories;
+    const categories = book.volumeInfo.categories[0];
     const price = book.saleInfo.retailPrice; // obj
     const buy_url = book.saleInfo.buyLink;
 
+    // create card components
     const card = document.createElement("div");
     card.classList.add("card");
+    card.style.width = "18rem";
 
     card.innerHTML = `
-        <img src=${image_url} class="card-img-top" height="400" width="250" alt=${title}>
-        <div class="card-body">
-            <h5 class="card-title">Title: ${title}</h5>
-            <h6 class="sub-title text-muted">Author: ${author}</h6>
-            <p class="card-text">Categories: ${categories}</p>  
-            <p class="card-text">ISBN: ${isbn}</p>
-            <button name="add_Button strong" class="btn btn-success">BOOK ET</button>
-        </div>
-        `;
-    // add event listener
-
+    <img src=${image_url} class="card-img-top" height="400" width="250" alt=${title}>
+    <div class="card-body">
+        <h5 class="card-title">Title: ${title}</h5>
+        <h6 class="sub-title text-muted">Author: ${author}</h6>
+        <h6 class="sub-title text-muted">ISBN: ${isbn}</h6>
+        <p class="card-text">Categories: ${categories}</p>  
+        <button name="add_Button strong" class="btn btn-primary">BOOK ET</button>
+    </div>
+    `
+    // append card to results container to display results
     document.getElementById("results_container").appendChild(card);
+
+    const addBtn = card.children[1].lastElementChild;
+    addBtn.addEventListener("click", addCard);
   }
+}
+
+function addCard(e) {
+  // extract the data from the elements using target element values
+  console.log(e.target.parentElement);
+
+  const image_url = e.target.parentElement.parentElement.children[0].getAttribute("src") //link only
+  const title = e.target.parentElement.children[0].innerHTML; //Title: "Book title" 
+  const author = e.target.parentElement.children[1].innerHTML;
+  const isbn = e.target.parentElement.children[2].innerHTML;
+  const categories = e.target.parentElement.children[3].innerHTML
+
+
+
+
+  console.log(categories);
+
+
+
+  // use fetch to make post call to our api 
 }
